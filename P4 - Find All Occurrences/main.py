@@ -4,14 +4,14 @@ with open("input.txt", "r") as f:
     pattern = f.readline().strip()
     text = f.readline().strip()
 
-def allOccurences(pattern, text):
-    occurences = []
+def allOccurrences(pattern, text):
+    occurrences = []
     for i in range(0, len(text)-len(pattern)):
         if text[i:i+len(pattern)] == pattern:
-            occurences.append(i)
-    return occurences
+            occurrences.append(i)
+    return occurrences
     
 
 with open("output.txt", "w") as f:
-    f.write(" ".join(map(str, allOccurences(pattern, text))))
+    f.write(" ".join(map(str, allOccurrences(pattern, text))))
 
