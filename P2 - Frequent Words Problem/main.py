@@ -6,7 +6,7 @@ with open("input.txt", "r") as f:
 
 def mostFrequent(text, k):
     kmers = collections.defaultdict(int)
-    for i in range(0, len(text)-k):
+    for i in range(0, len(text)-k+1):
         substr = text[i:i+k]
         kmers[substr] += 1
     max_freq = max(kmers.values())
